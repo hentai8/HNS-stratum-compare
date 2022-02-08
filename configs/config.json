@@ -1,0 +1,52 @@
+{
+  "mysql": {
+    "username": "root",
+    "password": "1007",
+    "network": "tcp",
+    "server": "127.0.0.1",
+    "port": 3306,
+    "database": "pool_watcher"
+  },
+  "redis": {
+    "addr": "127.0.0.1:6379",
+    "password": ""
+  },
+  "coins": [
+    {
+      "name": "ltc",
+      "port": "9433",
+      "target_pool": {
+        "name": "dxpool",
+        "host": "hns.ss.dxpool.com",
+        "port": "3009",
+        "worker": "hentai8.hentai8",
+        "enable": true,
+        "report_url": "127.0.0.1:1024"
+      },
+      "listening_pools": [
+        {
+          "name": "poolin",
+          "host": "hns.ss.poolin.me",
+          "port": "443",
+          "worker": "worker.miner",
+          "enable": true
+        },
+        {
+          "name": "f2pool",
+          "host": "hns.f2pool.com",
+          "port": "6000",
+          "worker": "worker.miner",
+          "enable": true
+        },
+        {
+          "name": "viabtc",
+          "host": "mining.viabtc.io",
+          "port": "3008",
+          "worker": "hentai8.hentai8",
+          "enable": true
+        }
+      ]
+    }
+  ]
+}
+
