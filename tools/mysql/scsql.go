@@ -1,11 +1,11 @@
 package mcsql
 
 import (
+	"HNS-stratum-compare/configs"
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jinzhu/configor"
 	"github.com/jmoiron/sqlx"
-	"pool-watcher/configs"
 	"sync"
 )
 
@@ -53,7 +53,7 @@ var cfg configs.Config
 //  @return *sqlx.DB
 //
 func create() *sqlx.DB {
-	err := configor.Load(&cfg, "/home/hentai8/Desktop/project/pool-watcher/configs/config.json")
+	err := configor.Load(&cfg, "../../configs/config.json")
 	if err != nil {
 		fmt.Println("read config err=", err)
 		return nil
