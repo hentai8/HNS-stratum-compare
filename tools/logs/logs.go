@@ -1,9 +1,9 @@
 package Logs
 
 import (
-	"fmt"
-	"log"
-	"os"
+    "fmt"
+    "log"
+    "os"
 )
 
 // 存储日志到mysql数据库里
@@ -19,7 +19,7 @@ type Log struct {
 //  @param v
 //
 func (a *Log) Log(v ...interface{}) {
-	log.Println(v...)
+    log.Println(v...)
 }
 
 //
@@ -29,7 +29,7 @@ func (a *Log) Log(v ...interface{}) {
 //  @param err
 //
 func (a *Log) CheckError(err error) {
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
-	}
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
+    }
 }
